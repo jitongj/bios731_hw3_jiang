@@ -1,0 +1,18 @@
+"0","d <- sum(delta)"
+"0",""
+"0","lambda_hat <- fit_em$lambda_hat"
+"0",""
+"0","avar_lambda <- lambda_hat^2 / d"
+"0","avar_log_lambda <- 1 / d"
+"0",""
+"0","se_log_lambda <- sqrt(avar_log_lambda)"
+"0",""
+"0","lower <- exp(log(lambda_hat) - 1.96 * se_log_lambda)"
+"0","upper <- exp(log(lambda_hat) + 1.96 * se_log_lambda)"
+"0",""
+"0","cat(sprintf(""Lambda_hat = %.6f\n"", lambda_hat))"
+"1","Lambda_hat = 0.007682
+"
+"0","cat(sprintf(""95%% CI = (%.6f, %.6f)\n"", lower, upper))"
+"1","95% CI = (0.006460, 0.009135)
+"

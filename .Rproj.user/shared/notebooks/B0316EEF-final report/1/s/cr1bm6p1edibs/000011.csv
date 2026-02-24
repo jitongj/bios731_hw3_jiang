@@ -1,0 +1,13 @@
+"0","# Louis' method"
+"0","d <- sum(delta)"
+"0","lambda_hat <- fit_em$lambda_hat"
+"0",""
+"0","se_log_louis <- 1 / sqrt(d)"
+"0","ci_louis <- exp(log(lambda_hat) + c(-1, 1) * 1.96 * se_log_louis)"
+"0",""
+"0","cat(sprintf(""Louis: lambda_hat = %.6f\n"", lambda_hat))"
+"1","Louis: lambda_hat = 0.007682
+"
+"0","cat(sprintf(""Louis 95%% CI: (%.6f, %.6f)\n"", ci_louis[1], ci_louis[2]))"
+"1","Louis 95% CI: (0.006460, 0.009135)
+"
