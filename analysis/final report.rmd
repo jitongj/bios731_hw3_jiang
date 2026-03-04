@@ -359,6 +359,12 @@ p_iter <- ggplot(iter_dat, aes(x = method, y = iterations)) +
     axis.text.x = element_text(angle = 20, hjust = 1)
   )
 
+out_table <- plot_dat %>%
+  select(method, term, estimate, ci_lower, ci_upper, true_value, time_sec, iterations) %>%
+  arrange(term, method)
+
+
+out_table
 
 p_est_ci
 p_time
